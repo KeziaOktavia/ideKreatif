@@ -10,7 +10,7 @@ $database= "idekreatif"; //Nama database yang digunakan
 $conn = mysqli_connect($host, $username, $password, $database);
 
 // Mengecek apakah koneksi berhasil
-if ($conn->connect_eror) {
+if ($conn->connect_error) {
     // Menampilkan pesan error jika koneksi gagal
     die("Database gagal terkoneksi: " . $conn->connect_error);
 }
