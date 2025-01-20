@@ -68,3 +68,29 @@ include '.includes/toast_notification.php';
     </div>
 </div>
 <?php include '.includes/footer.php'; ?>
+
+<!-- Modal untuk Tambah Data Kategori -->
+ <div class="modal fade" id="addCategory" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-tittle">Tambah Data</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form action="proses_kategori.php" method="POST">
+                    <div>
+                        <label for="namaKategori" class="form-label">Nama Kategori</label>
+                        <!-- Input untuk nama kategori baru -->
+                         <input type="text" class="form-control" name="category_name"required/>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary"
+                        data-bs-dismiss="modal">Batal</button> 
+                        <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
