@@ -10,3 +10,12 @@ $notification = $_SESSION['notification'] ?? null;
 if ($notification) {
     unset($_SESSION['notification']);
 }
+
+if (empty($_SESSION["username"]) || empty($_SESSION["role"])) {
+    $_SESSION['notification'] = [
+        'type' => 'danger',
+        'message' => 'Silahkan Login Terlebih Dahulu!'
+    ];
+    header('Location: ./auth/logon.php');
+    exit();
+}
