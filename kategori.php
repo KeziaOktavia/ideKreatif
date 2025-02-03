@@ -8,7 +8,7 @@ include '.includes/toast_notification.php';
 <div class="container-xxl flex-grow-1 container-p-y">
     <!-- Tabel data kategori -->
      <div class="card">
-        <div class="card-header d-flex justify-content-between aligin-items-center">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <h4>Data Kategori</h4>
             <!-- Tombol untuk menambah kategori baru -->
              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCategory">
@@ -45,11 +45,11 @@ include '.includes/toast_notification.php';
                                     hide-arrow" data-bs-toggle="dropdown">
                                         <i class="bx bx-dots-vertical-rounded"></i>
                                     </button>
-                                    <div class="dropdown-mwnu">
+                                    <div class="dropdown-menu">
                                         <a href="#"class="dropdown-item"data-bs-toggle="modal"
                                         data-bs-target="#editCategory_<?= $category['category_id']; ?>">
                                             <i class="bx bx-edit-alt me-2"></i>Edit</a>
-                                            <a href="#"class="dropdown_item"data-bs-toggle="modal"
+                                            <a href="#"class="dropdown-item"data-bs-toggle="modal"
                                             data-bs-target="#deleteCategory_<?= $category['category_id']; ?>">
                                         <i class="bx bx-trash me-2"></i>Delete</a>
                                     </div>    
@@ -61,14 +61,14 @@ include '.includes/toast_notification.php';
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-tittle">Hapus Kategori</h5>
+                                        <h5 class="modal-title">Hapus Kategori</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                     </div>
                                     <div class="modal-body">
                                         <form action="proses_kategori.php" method="POST">
                                             <div>
                                                 <p>Tindakan ini tidak bisa dibatalkan.</p>
-                                                <input type="hidden" name="catID" value="<?=$category[category_id]; ?>">
+                                                <input type="hidden" name="catID" value="<?=$category['category_id']; ?>">
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-outline-secondary"
@@ -85,7 +85,7 @@ include '.includes/toast_notification.php';
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-tittle">Update Data Kategori</h5>
+                                    <h5 class="modal-title">Update Data Kategori</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                 </div>
                                 <div class="modal-body">
@@ -99,7 +99,7 @@ include '.includes/toast_notification.php';
                                          </div>
                                          <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                            <button type="submit" name="update" class="btn btn-warming">Update</button>
+                                            <button type="submit" name="update" class="btn btn-warning">Update</button>
                                         </div>
                                     </form>
                                 </div>
@@ -120,7 +120,7 @@ include '.includes/toast_notification.php';
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-tittle">Tambah Data</h5>
+                <h5 class="modal-title">Tambah Data</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
