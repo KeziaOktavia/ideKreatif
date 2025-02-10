@@ -2,6 +2,7 @@
 session_start();
 
 // Periksa apakah kunci "name" dan "role" ada dalam sesi sebelum mengaksesnya
+$userId = $_SESSION["user_id"];
 $name = $_SESSION["name"];
 $role = $_SESSION["role"];
 

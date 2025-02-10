@@ -6,7 +6,7 @@ include '.includes/toast_notification.php';
 ?>
 <div class="container-xxl flex-grow-1 container-p-y">
     <!-- Card untuk menampilkan tabel postingan -->
-     <class="card">
+     <div class="card">
         <!-- Tabel dengan baris yang dapat di-hover -->
          <div class="card">
             <!-- Header Tabel -->
@@ -33,8 +33,8 @@ include '.includes/toast_notification.php';
                          /* Query untuk mengambil data dari tabel
                          posts, users, dan categories */
                          $query ="SELECT posts.*, users.name as user_name,
-                         categories.category_name FORM posts 
-                         INNER JOIN user ON posts.user_id = users.user_id
+                         categories.category_name FROM posts 
+                         INNER JOIN users ON posts.user_id = users.user_id
                          LEFT JOIN categories ON posts.category_id = categories.category_id
                          WHERE posts.user_id= $userId";
                          // Eksekusi query
