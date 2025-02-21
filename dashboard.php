@@ -1,6 +1,6 @@
 <?php
 include(".includes/header.php");
-$tittle ="Dashboard";
+$tittle = "Dashboard";
 // Menyertakan file untuk menampilkan notifikasi (jika ada)
 include '.includes/toast_notification.php';
 ?>
@@ -15,7 +15,7 @@ include '.includes/toast_notification.php';
              </div>
              <div class="card-body">
                 <!-- Tabel responsif -->
-                 <div class="table-resposive text-nowrap">
+                 <div class="table-responsive text-nowrap">
                     <table id="datatable" class="table table-hover">
                         <thead>
                             <tr class="text-center">
@@ -71,7 +71,7 @@ include '.includes/toast_notification.php';
                          </tr>
                          <!-- Modal untuk Hapus Konten Blog -->
                           <div class="modal fade" id="deletePost_<?= $post['id_post']; ?>" tabindex="-1" aria-hidden="true">
-                            <class="modal-dialog" role="document">
+                            <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title">Hapus Post?</h5>
@@ -79,7 +79,7 @@ include '.includes/toast_notification.php';
                                     </div>
                                     <div class="modal-body">
                                         <form action="proses_post.php" method="POST">
-                                    </div>
+                                    <div>
                                     <p>Tindakan ini tidak bisa dibatalkan.</p>
                                     <input type="hidden" name="postID" value="<?= $post['id_post']; ?>">
                                 </div>

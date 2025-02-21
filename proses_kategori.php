@@ -29,7 +29,7 @@ if (isset($_POST['simpan'])) {
     }
 
     // Redirect  kembali ke halaman kategori
-    header('Location: kategori.php');
+    header ('Location: kategori.php');
     exit();
 }
 

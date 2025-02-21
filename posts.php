@@ -29,7 +29,7 @@ include '.includes/header.php';
                              <option value="" selected disabled>Pilih salah satu</option>
                              <?php
                              $query = "SELECT * FROM categories"; // Query untuk mengambil data kategori
-                             $result - $conn->query($query); // Menjalankan query
+                             $result = $conn->query($query); // Menjalankan query
                              if ($result->num_rows > 0) { // Jika terdapat data kategori
                                 while ($row = $result->fetch_assoc()) { //Iterasi setiap kategori
                                     echo "<option value='" . $row["category_id"] . "'>" . $row["category_name"] . "</option>";
@@ -41,7 +41,7 @@ include '.includes/header.php';
                        <!-- Textarea untuk konten postingan-->
                         <div class="mb-3">
                             <label for="content" class="form-label">Konten</label>
-                            <textarea class="form-control" id="content" name="content"required></textarea>
+                            <textarea class="form-control" id="content" name="content" required></textarea>
                         </div>
                         <!-- Tombol submit -->
                          <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
@@ -54,3 +54,4 @@ include '.includes/header.php';
 <?php
 // Menyertakan footer halaman
 include '.includes/footer.php';
+?>
